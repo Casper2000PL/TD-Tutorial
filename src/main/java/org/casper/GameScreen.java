@@ -9,13 +9,15 @@ import java.util.Random;
 public class GameScreen extends JPanel {
     private Random random;
     private BufferedImage img;
+
     private ArrayList<BufferedImage> sprites = new ArrayList<>();
 
     public GameScreen(BufferedImage img) {
         this.img = img;
         loadSprites();
-
         random = new Random();
+
+
     }
 
     private void loadSprites() {
@@ -29,9 +31,6 @@ public class GameScreen extends JPanel {
 
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-
-//        g.drawImage(sprites.get(19),0,0,null);
-//        g.drawImage(img.getSubimage(32 * 9, 32, 32, 32), 0, 0, null);
 
         for (int y = 0; y < 20; y++) {
             for (int x = 0; x < 20; x++) {
